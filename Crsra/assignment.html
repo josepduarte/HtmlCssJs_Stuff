@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<title>My first web page</title>
+	<meta name="author" content= "José Pedro Duarte">
+	<meta name="description" content = "Made for Coursera">
+	<meta charset="UTF-8"> <!-- allows to print ã for example -->
+
+	<style>
+		body {background-color: blue}
+		h1 {color: white; background-color: black; text-align: center}
+		#white { color : white;}
+		.bgroundBlack {background-color: black}
+		.text { text-align: center }
+
+		ol li {background-color: green ; text-align: center ; color : red;}
+
+		h1:hover {font-size: 30px ; height: 70px}
+
+		a:link {color : yellow}
+		a:visited {color: gray}
+		a:active {color : black}
+		a:empty {color : red}
+
+		table, td, th {color : white; background-color: black; text-align: center; width : 200px; height: 30px; padding: 10px; border: 2px solid white;}
+
+		.top {vertical-align: top}
+		.left {text-align: left}
+
+		p {color:white; font-size: 20;}
+
+	</style>
+
+<!-- I can use styles from other file by using this 
+	<link rel="stylesheet" type="text/css" href="css_file_example.css">
+-->
+
+</head>
+
+<body>
+	<section id="top" class="text">
+		<h1> This is my very first web page</h1>
+		<p id="white"> Love <u> this </u></p>
+	</section>
+
+	<ul id="white" class = "bgroundBlack">
+		<li class="text">Mas <big> que macaco </big>. </li>
+		<li class="text">Mas que <mark> cão. </mark> </li>
+		<li style="text-align:right"><sup>It </sup><sub> is. </sub> </li>
+	</ul>
+
+
+	<ol type="A" reversed>
+		<li> <ins> yeah </ins> </li>
+		<li> <del id="white"> not yeah </del> </li>
+	</ol>
+	
+	<img src="batmanlogo.png" width="300">
+	<br>
+	<img src="../../../../../Pictures/badger-011.jpg" width="60%">
+
+	<audio src="octo.mp3" controls>
+		<p> Your browser does not support audio. </p>
+	</audio>
+
+	<br>
+
+	<video src= "30 Seconds To Mars - From Yesterday.avi" controls> 
+		<p> Your browser does not support video.</p>
+	</video>
+	<hr>
+	<br>
+
+	<a href="#top"><img src="batmanlogo.png" width="400"></a>
+
+	<a href="https://www.google.pt"><p>www.google.pt</p></a>
+
+	<!-- TABLES -->
+	<h1 style="text-align:center"> TABLES: </h1>
+
+	<table>
+		<thead>
+			<tr><th>YEAH</th> <th>WHAT</th> </tr>
+		</thead>
+		<tbody>
+			<tr> <td class="top left">1st</td> <td> 2st </td></tr>
+			<tr> <td>yeahh</td><td>wksd</td></tr>
+			
+		</tbody>
+	</table>
+
+	<!--forms -->
+	<h1> Forms: </h1>
+
+	<form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="get">
+		<p> Enter something. </p>
+
+		<textarea rows ="3" cols="60" name ="something">Enter that here.</textarea>
+
+		<br>
+		<input type="submit" value="Send">
+	</form>
+  	
+  	<br><br>
+
+  	<form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="get">
+  		Please enter your name. <br>
+  		<input type="text" name="name"> <br>
+
+  		Please select each of the following that you have. <br>
+  		<input type="checkbox" name="items" value="car">Car <br>
+  		<input type="checkbox" name="items" value="cenas">Cenas <br>
+  		<input type="checkbox" name="items" value="what">What <br>
+
+  		Please indicate your intelligence level. <br>
+  		<input type="radio" name="iq" value="high">High <br>
+  		<input type="radio" name="iq" value="medium">Medium <br>
+  		<input type="radio" name="iq" value="low">Low <br>
+
+  		<input type="submit" value="Send all data">
+  	</form>
+
+  	<br><br>
+
+  	<form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post">
+
+  		<p> Password? </p>
+  		<input type="password" name="password"> <br>
+
+  		<input type="submit" value="Save password. ">
+  	</form>
+
+  	<br><br>
+
+  	<form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="get">
+  		<p>what type of animal are you?</p>
+  		<select name="animal">
+  			<option value="monkey">Monkey</option>
+  			<option value="dog">Dog</option>
+  		</select>
+
+  		<input type="submit" value="Confirm animal">
+  	</form>
+
+  	<br><br>
+
+  	<form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="get">
+
+  		<p> Fill following information: </p>
+  		<!--for has to be the same as id-->
+  		<label for="firstname">First name: </label>
+  		<input type="text" id="firstname" name="firstname" value="João" autofocus required>
+  		<br>
+  		<label for="lastname">Last name:</label>
+  		<input type="text" id="lastname" name="lastname" placeholder="Enter last name here. " required>
+
+  		<input type="submit" value="Submit">
+  	</form>
+
+  	<br>
+
+  	<h1>File upload</h1>
+  	<!-- big things like files have to use post. Get is for small text -->
+
+  	<form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
+
+  		<input type="file" name="File to upload">
+  		<input type="submit" value="Upload">
+  	</form>
+
+  	<br><br>
+
+  	<h1> New input types HTML 5 </h1>
+
+  	<form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="get">
+  	
+  		<label for="age">Your age:</label>
+  		<input type="number" min="18" max ="65" step="1" value="20" id="age" name="age" required><br>
+
+  		<label for="birthday">Your birthday:</label>
+  		<input type="date" id="birthday" name = "birthday"><br>
+
+  		<label "wakeup"> Wake up at: </label>
+  		<input type="time" id="wakeup" name="wakeup"><br>
+
+  		<label for="color">Favorite color:</label>
+  		<input type="color" id="color" name="color"><br>
+
+  		<label for="mood">Your mood: </label>
+  		Sad 
+  		<input type="range" min="0" max="50" step = "10" value "20" id="mood" name="mood"> Happy <br>
+
+  		<input type="submit" value="Submit!">
+
+  	</form>
+
+  	<br><br>
+
+  	<h1> Fieldsets </h1>
+
+  	<form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="get">
+
+  		<fieldset>
+  			<legend>Personal information</legend>
+  			First name? <input type="text" name ="firstname"><br><br>
+  			Last name? <input type="text" name ="lastname"><br><br>
+  			<input type="submit" value="confirm">
+
+  		</fieldset>
+  	</form>
+
+  	
+	
+</body>
+	
+</html>

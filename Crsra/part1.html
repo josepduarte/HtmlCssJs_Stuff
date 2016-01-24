@@ -1,0 +1,95 @@
+<!doctype html>
+
+<head>
+
+	<title>Part1 - Coursera</title>
+	<meta name="author" content="José Pedro Duarte">
+
+</head>
+
+<body>
+	
+	<h1>Please Enter Your Details For Our Dating Website!</h1>
+
+<form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method=get>
+
+	<fieldset>
+
+		<legend>Your face</legend>
+
+		<label for="avatar">Your image:</label> 
+		<input type="file" id ="avatar" name ="avatar" required> <br>
+
+		<label for="preview">Image preview:</label>
+		<img id="preview">
+
+	</fieldset>
+
+	<fieldset>
+		
+		<legend>Your general details</legend>
+
+		<label for="name">Name:</label> 
+		<input type="text" id="name" placeholder="Your full name" name ="name"required>
+		<br>
+
+		<label for="gender">Gender:</label>
+		<input type="radio" id="gender" name="gender" required> Male
+		<input type="radio" id="gender" name="gender" renquired> Female
+		<br>
+
+		<label for="age">Age:</label>
+		<input type="number" id="age" name="age" required>
+		<br>
+
+		<label for="dateOfbirth">Date of brirth: </label>
+		<input type="date" id="dateOfbirth" name="dateOfbirth">
+		<br>
+
+		<label for="favColor">Favorite color:</label>
+		<input type="color" id="favColor"name="favColor">
+		<br>
+
+		<label for="country">Which country?</label>
+		<select id="country" name="country">
+			<option value="Portugal"> Portugal</option>
+			<option value="Spain">Spain</option>
+			<option value="England">England</option>
+			<option value="France">France</option>
+			<option value="Finland">Finland</option>
+			<option value="Italy">Italy</option>
+		</select>
+	</fieldset>
+
+	<fieldset>
+		<legend>Your indicators</legend>
+
+		<label for="height"> Height: </label> Short <input type="range" min="0" max="100" id = "height" name="height"> Tall
+		<br>
+		<label for="salary"> Salary: </label> Poor <input type="range" id="salary" name="salary" min="0" max="100"> Rich
+
+	</fieldset>
+
+	<fieldset>
+		<legend>Your Contact information</legend>
+
+		<label for="email">Email: </label><input type="email" id="email" name = "email" required>
+		<br>
+
+		<label for="mobile">Mobile:</label><input type="tel" id="mobile" name="mobile">
+		<br>
+
+		<label for="address">Address:</label> <input type="textarea" id="address" name="address">
+		<br>
+
+		<label for "toContact">Method to contact you: </label>
+		<input type="radio" id="toContact" name="toContact">Email
+		<input type="radio" id="toContact" name="toContact">Whatsapp
+		<input type="radio" id="toContact" name="toContact">In app chat
+
+	</fieldset>
+
+	<input type="submit" value="Submit">
+
+</form>
+</body>
