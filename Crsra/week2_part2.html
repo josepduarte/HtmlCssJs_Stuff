@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Color Guessing - Part 2</title>
+		
+		<style>
+			h1 { 
+				font-family: 'Lucida Console', 'Lucida Sans Typewriter', monaco, 'Bitstream Vera Sans Mono', monospace;
+				font-size: 30px;
+				font-style: normal;
+				font-variant: normal;
+				font-weight: bold;
+				line-height: 500px;
+				text-align: center;
+				vertical-align: bottom;
+			 } 
+		</style>
+
+		<script>
+			//initialize array
+			var colorArray = ["Aqua", "Blue", "Brown", "Chocolate", "Gold", "Indigo", "Orange", "Pink", "Purple", "Red", "Salmon", "SandyBrown", "Wheat", "Yellow", "YellowGreen"];
+
+			//initialize variables
+			var random_color;
+			var finished = false;
+			var guess;
+			var count = 0;
+
+			function do_game(){
+				//pick a random color of the array
+				random_color = colorArray[Math.floor(Math.random() * (colorArray.length))];
+
+				//Just for testing
+				alert(" --FOR TESTING -- Color picked: " + random_color);
+
+				while(!finished){
+					guess = prompt("I am thinking of one of these colors: \n\n[ " + colorArray.join(" | ") + " ]\n\nWhat color am I thinking? ");
+					count++;
+					finished = check_guess();
+					console.log("Finished = " + finished);
+				}
+				
+			}
+			function check_guess(){
+				console.log("random_color: " + random_color + "\nGuessed: " + guess + "\n");
+				console.log(colorArray.indexOf(guess) == -1);
+				console.log(guess > random_color);
+				console.log(guess < random_color);
+
+				if(colorArray.indexOf(guess) == -1){
+					alert("Sorry, I don't recognize your color.\n\nPlease try again");
+					return false;
+				}
+				if(guess > random_color){
+					alert("Sorry, your guess is not correct!\n\nHint: your color is alphabetically higher than mine.\n\nPlease try again. ");
+					return false;
+				}
+				if(guess < random_color){
+					alert("Sorry, your guess is not correct!\n\nHint: your color is alphabetically lower than mine.\n\nPlease try again. ");
+					return false;
+				}
+				console.log("Returned true!");
+				//background
+				mybody = document.getElementsByTagName("body")[0];
+				mybody.style.background=random_color;
+				alert("Congratulations! You have guessed the color!\n\nIt took you " + count + " guesses to finish the game!\n\nYou can see the colour in the background. ");
+
+				return true;
+			}
+					
+		</script>
+
+		
+	</head>
+
+	<body onload="do_game()">
+		<h1> Just a guessing color game. </h1>
+	</body>
+</html>
