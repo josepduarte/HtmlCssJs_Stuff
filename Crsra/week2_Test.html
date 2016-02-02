@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Examples week 2</title>
+
+		<script>
+
+			/*
+			* Confirm example
+			*
+			if(confirm("Want to go to google?"))
+				document.location.href="http://www.google.com";
+			else
+				document.location.href="http://www.sapo.pt";
+			*/
+
+			/*
+			* Prompt example
+			*
+			var user_name;
+			user_name=prompt("What the hell is your name?");
+			document.write("Welcome to my page " + user_name + "!");
+
+			*/
+
+			/*
+			* Variables example
+			*			
+			alert('"John" is type: ' + typeof "John" + "\n\n" 
+				+ "3.14 is type: " + typeof 3.14 + "\n\n"
+				+ "false is type: " + typeof false);
+
+			*/
+			/*
+			function greet(name){
+				console.log("Hello " + name);
+				console.log("We start");
+				prompt("Iei");
+
+				var response = "Ola";
+				if(response.charAt(0) == "O")
+					alert("Hello");
+			}
+			*/
+
+			var b1 = false;
+			var b2 = !b1;
+			alert("b1=" + b1);
+			alert("b2=" + b2);
+			b1 = true;
+			alert("b1=" + b1);
+			alert("b2=" + b2);
+			
+		</script>
+	</head>
+
+	<!--
+	<body onload="alert('Hello'); alert('yeahhh');
+			prompt('ieiiii')">
+		
+		<p> A message is loaded as soon the page is loaded. </p>
+	</body>
+	-->
+
+	<body onload="greet('Jose')">
+		
+	</body>
+
+</html>
